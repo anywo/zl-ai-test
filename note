@@ -1,0 +1,9 @@
+curl 'http://127.0.0.1:8725/experiment/devices' -H "Content-Type:application/json" -X POST -d '{"deskId":"1","upCamera":"file:///home/user/zhilin/hpw/score_ds_py/test_up.mp4","frontCamera":"file:///home/user/zhilin/hpw/score_ds_py/test_front.mp4"}'
+
+curl 'http://127.0.0.1:8725/experiment/devices' -H "Content-Type:application/json" -X POST -d '{"deskId":"1","upCamera":"rtsp://admin:wcy12345@10.100.224.54/h264/ch1","frontCamera":"rtsp://admin:wcy12345@10.100.224.48/h264/ch1"}'
+
+curl 'http://127.0.0.1:8725/experiment/start' -H "Content-Type:application/json" -X POST -d '{"deskId":"1","experimentUuid":"test","experimentCode":"01030001"}'
+a
+curl 'http://127.0.0.1:8725/experiment/step' -H "Content-Type:application/json" -X POST -d '{"deskId":"1","experimentUuid":"test","stepCode":"0103000104"}'
+
+curl 'http://127.0.0.1:8725/experiment/stop' -H "Content-Type:application/json" -X POST -d '{"deskId":"1","experimentUuid":"test"}'
