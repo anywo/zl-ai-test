@@ -7,3 +7,30 @@ a
 curl 'http://127.0.0.1:8725/experiment/step' -H "Content-Type:application/json" -X POST -d '{"deskId":"1","experimentUuid":"test","stepCode":"0103000104"}'
 
 curl 'http://127.0.0.1:8725/experiment/stop' -H "Content-Type:application/json" -X POST -d '{"deskId":"1","experimentUuid":"test"}'
+
+
+
+curl --location --request POST 'http://127.0.0.1:8725/experiment/devices' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "deskId": 1,
+    "upCamera": "rtsp://admin:wcy12345@10.100.224.54/h264/ch1",
+    "frontCamera": "rtsp://admin:wcy12345@10.100.224.85/h264/ch1",
+    "sideCamera": ""
+}'
+
+curl --location --request POST 'http://127.0.0.1:8725/experiment/start' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "deskId": 1,
+    "experimentUuid": "test",
+    "experimentCode": "01030001"
+}'
+
+curl --location --request POST 'http://127.0.0.1:8725/experiment/stop' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "deskId": 1,
+    "experimentUuid": "test",
+    "experimentCode": "01030001"
+}'
