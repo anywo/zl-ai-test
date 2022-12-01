@@ -15,7 +15,7 @@ curl --location --request POST 'http://127.0.0.1:8725/experiment/devices' \
 --data-raw '{
     "deskId": 1,
     "upCamera": "rtsp://admin:wcy12345@10.100.224.54/h264/ch1",
-    "frontCamera": "rtsp://admin:wcy12345@10.100.224.85/h264/ch1",
+    "frontCamera": "rtsp://admin:wcy12345@10.100.224.48/h264/ch1",
     "sideCamera": ""
 }'
 
