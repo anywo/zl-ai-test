@@ -34,3 +34,5 @@ curl --location --request POST 'http://127.0.0.1:8725/experiment/stop' \
     "experimentUuid": "test",
     "experimentCode": "01030001"
 }'
+
+http://127.0.0.1:8725/experiment/score?experimentUuid=test
